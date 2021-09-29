@@ -1,0 +1,14 @@
+version: v1.0
+name: x86_64-native-ubuntu1804-build
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: Hello
+    task:
+      jobs:
+      - name: Hello
+        commands:
+          - echo "OS=${OS} KERNEL=${KERNEL}"
