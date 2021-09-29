@@ -11,4 +11,5 @@ blocks:
       jobs:
       - name: Hello
         commands:
-          - echo "OS=${OS} KERNEL=${KERNEL}"
+          - OS=$(uname -a | cut -d " " -f1)
+          - echo "OS=${OS}"
